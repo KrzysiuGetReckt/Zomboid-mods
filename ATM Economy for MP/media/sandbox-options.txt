@@ -1,0 +1,19 @@
+VERSION = 1,
+
+option ATMEconomyforMP.WatchesForMoney
+{
+	type = integer, 
+	default = 1,
+	page = ATMEconomyforMP, translation = One Watch for X amount of money,
+	Tooltip = "How much money the player receives when exchanging a watch at an ATM."
+}
+
+option ATMEconomyforMP.JewelryWithMinerals
+{
+	type = integer, 
+	default = 2,
+	page = ATMEconomyforMP, translation = One Jewelry With Minerals for X amount of money,
+	Tooltip = "How much money the player receives when exchanging a watch at an ATM."
+}
+
+

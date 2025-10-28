@@ -1,0 +1,10 @@
+module Base
+{
+	model MoneyATM
+	{
+		mesh = dispencer,
+		texture = WorldItems/MoneyATM,
+		scale = 0.6,
+	}
+	
+}
