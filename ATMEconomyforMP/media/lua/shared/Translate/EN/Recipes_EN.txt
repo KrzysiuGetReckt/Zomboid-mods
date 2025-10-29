@@ -1,0 +1,4 @@
+Recipes_EN = {
+	Recipe_Watches_for_money = "Exchange Watches for money",
+	Recipe_Jewelry_with_Gemstones_for_Money = "Jewelry with Gemstones for Money"
+	}

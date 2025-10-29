@@ -1,0 +1,51 @@
+VERSION = 1,
+
+option ATMEconomyforMP.WatchesForMoney
+{
+	type = integer, 
+	default = 1,
+    min = 1,
+    max = 100,
+	page = ATMEconomyforMP, 
+    translation = ATMEconomyforMP_WatchesForMoney,
+}
+
+option ATMEconomyforMP.JewelryWithGemstone
+{
+	type = integer, 
+	default = 2,
+    min = 1,
+    max = 100,
+	page = ATMEconomyforMP, 
+    translation = ATMEconomyforMP_JewelryWithGemstone,
+}
+
+option ATMEconomyforMP.JewelryWithDiamondForMoney
+{
+	type = integer, 
+	default = 5,
+    min = 1,
+    max = 100,
+	page = ATMEconomyforMP, 
+    translation = ATMEconomyforMP_JewelryWithDiamondForMoney,
+}
+
+option ATMEconomyforMP.AmuletForMoney
+{
+	type = integer, 
+	default = 10,
+    min = 1,
+    max = 100,
+	page = ATMEconomyforMP, 
+    translation = ATMEconomyforMP_AmuletForMoney,
+}
+
+option ATMEconomyforMP.DogtagsForMoney
+{
+	type = integer, 
+	default = 5,
+    min = 1,
+    max = 100,
+	page = ATMEconomyforMP, 
+    translation = ATMEconomyforMP_DogtagsForMoney,
+}

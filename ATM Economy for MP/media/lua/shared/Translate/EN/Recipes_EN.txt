@@ -1,5 +1,0 @@
-Recipes_EN = {
-
-	Recipe_Watches_for_money = "Exchange Watch for money",
-
-	}

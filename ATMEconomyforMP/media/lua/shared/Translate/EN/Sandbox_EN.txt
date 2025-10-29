@@ -1,0 +1,10 @@
+Sandbox_EN = {
+    Sandbox_ATMEconomyforMP = "ATM Economy for MP",
+
+    Sandbox_ATMEconomyforMP_WatchesForMoney = "One Watch for X amount of money",
+    Sandbox_ATMEconomyforMP_JewelryWithGemstone = "Jewelry with Gemstones for X amount of money",
+    Sandbox_ATMEconomyforMP_JewelryWithDiamondForMoney = "Jewelry with Diamonds for X amount of money",
+    Sandbox_ATMEconomyforMP_AmuletForMoney = "Amulets for X amount of money",
+    Sandbox_ATMEconomyforMP_DogtagsForMoney = "Dogtags for X amount of money",
+
+}

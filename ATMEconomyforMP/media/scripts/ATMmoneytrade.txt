@@ -1,19 +1,19 @@
-module ATMmoneytrade {
-    {
+module ATMmoneytrade 
+{    
     imports
     {
         Base
     }
+
     item MoneyATM
-        {
-            Weight              = 50.0,
-            Type                = Normal,
-            DisplayName         = Money ATM,
-            Icon                = MoneyATM,
-            StaticModel         = MoneyATM,
-            WorldStaticModel    = MoneyATM,
-            DisplayCategory     = Money,
-        }
+    {
+        Weight              = 50.0,
+        Type                = Normal,
+        DisplayName         = "Money ATM",
+        Icon                = MoneyATM,
+        StaticModel         = MoneyATM,
+        WorldStaticModel    = MoneyATM,
+        DisplayCategory     = Money,
     }
 
     recipe Test ATM
@@ -40,15 +40,15 @@ module ATMmoneytrade {
 
         keep ATMmoneytrade.MoneyATM,
 
-        Result:Base.Money=0,
+        Result:Money=0,
         CanBeDoneFromFloor:true,
         Category:ATM_Exchange,
         Time:5,
-        OnCreate:ExchangeWatchesForMoney,
+        OnCreate:WatchesForMoney,
         OnTest:ExchangeEverythingForMoneyOnTest,
     }
 
-    recipe Jewelry with Minerals for Money 
+    recipe Jewelry with Gemstones for Money 
     {
         destroy Base.Ring_Right_MiddleFinger_Gold/Base.Ring_Left_MiddleFinger_Gold/
                 Base.Ring_Right_RingFinger_Gold/Base.Ring_Left_RingFinger_Gold/
@@ -89,12 +89,107 @@ module ATMmoneytrade {
 
         keep ATMmoneytrade.MoneyATM,
 
-        Result:Base.Money=0,
+        Result:Money=0,
         CanBeDoneFromFloor:true,
         Category:ATM_Exchange,
         Time:5,
-        OnCreate:ExchangeJewelryWithMineralsForMoney,
+        OnCreate:JewelryWithGemstoneForMoney,
         OnTest:ExchangeEverythingForMoneyOnTest,
     }
 	
+    /* BASELINE ITEMS FOR MONEY */
+
+    recipe Jewelry with Diamond for Money
+    {
+        destroy Base.Earring_Dangly_Diamond/Base.Ring_Right_MiddleFinger_SilverDiamond/
+        Base.Ring_Left_MiddleFinger_SilverDiamond/Base.Ring_Right_RingFinger_SilverDiamond/
+        Base.Ring_Left_RingFinger_SilverDiamond/Base.Ring_Right_MiddleFinger_GoldDiamond/
+        Base.Ring_Left_MiddleFinger_GoldDiamond/Base.Ring_Right_RingFinger_GoldDiamond/
+        Base.Ring_Left_RingFinger_GoldDiamond/Base.Necklace_Choker_Diamond/
+        Base.NecklaceLong_SilverDiamond/Base.NecklaceLong_GoldDiamond/
+        Base.Necklace_SilverDiamond/Base.Necklace_GoldDiamond/
+        Base.BellyButton_RingGoldDiamond/Base.BellyButton_DangleSilverDiamond/
+        Base.BellyButton_RingSilverDiamond/Base.BellyButton_StudGoldDiamond/
+        Base.BellyButton_StudSilverDiamond/,
+
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Money=0,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnCreate:JewelryWithDiamondForMoney,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+    }
+
+    recipe Amulets for Money
+    {
+        destroy Base.Locket,
+        
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Money=0,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnCreate:AmuletForMoney,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+    }
+
+    recipe Dogtag for Money
+    {
+        destroy Base.Necklace_DogTag,
+        
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Money=0,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnCreate:DogtagForMoney,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+    }
+
+    recipe Pay for Soda
+    {
+        destroy Money=5,
+
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Base.Pop2,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+    }
+
+    /* MONEY FOR FOOD */
+
+    recipe Pay for Water Bottle
+    {
+        destroy Money=10,
+
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Base.WaterBottleFull,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+
+    }
+
+    recipe Pay for TinOpener
+    {
+        destroy Money=1,
+
+        keep ATMmoneytrade.MoneyATM,
+
+        Result:Base.TinOpener,
+        CanBeDoneFromFloor:true,
+        Category:ATM_Exchange,
+        Time:5,
+        OnTest:ExchangeEverythingForMoneyOnTest,
+    }
+
 }
